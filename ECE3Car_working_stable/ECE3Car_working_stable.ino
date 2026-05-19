@@ -1,6 +1,7 @@
 #include <ECE3.h>
 
 // YURP!!!!!!!!
+// BRUH!
 
 uint16_t sensorMinimum[8] = {666, 550, 666, 500, 759, 596, 605, 642};
 uint16_t sensorMaximum[8] = {1834, 1950, 1834, 1728, 1741, 1904, 1671, 1858};
