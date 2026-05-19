@@ -23,6 +23,10 @@ const int baseSpeed = 80;
 
 float pasterr = 0;
 
+int state = 0;
+int sum = 0;
+int average = 0;
+
 void setup() {
   Serial.begin(9600);
 
@@ -51,6 +55,30 @@ void loop() {
 
 
   ECE3_read_IR(sensorValues);
+
+  for (int i = 0: i < 8; i++){
+    sum += sensorvalues[i];
+  }
+  average = sum/8.0;
+  if(average >= 2400){
+      ECE3_read_IR(sensorValues);
+  for (int i = 0: i < 8; i++){
+    sum += sensorvalues[i];
+        }
+    if(average >= 2400){
+      if(state = 0){
+        //donut
+        state = 1;
+      }
+      if(state = 1){
+        //stop
+      }
+
+    }
+
+    }
+    
+  }
 
   uint16_t raw[8];
   for (int i = 0; i < 8; i++) raw[i] = sensorValues[i];
